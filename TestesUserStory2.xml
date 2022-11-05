@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <projectId>10001</projectId>
+    <projectKey>SWAG</projectKey>
+    <exportDate>2022-11-05 21:23:54 UTC</exportDate>
+    <folders>
+        <folder fullPath="Validação das mensagens" index="1"/>
+    </folders>
+    <testCases>
+        <testCase id="54567964" key="SWAG-T4">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Rodrigo Valentim Alves</createdBy>
+            <createdOn>2022-11-05 21:10:08 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Validação das mensagens]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Mensagem de alerta de não preenchimento dos campos]]></name>
+            <objective><![CDATA[Validar apresenta&ccedil;&atilde;o da mensagem de alerta de n&atilde;o preenchimento dos campos]]></objective>
+            <owner>62fedec4bb0704a2a809cffb</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given que o cliente está na tela de cadastro de nova conta
+
+And não preenche username
+
+And não preenche e-mail
+
+And não preenche senha
+
+When clica em 'criar conta'
+
+Then o sistema circula os campos na cor vermelha e apresenta POP-UP com mensagem de conta não criada devido campos não serem preenchidos]]></details>
+            </testScript>
+        </testCase>
+        <testCase id="54567966" key="SWAG-T5">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Rodrigo Valentim Alves</createdBy>
+            <createdOn>2022-11-05 21:16:12 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Validação das mensagens]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Cliente sem cadastro tenta fazer login]]></name>
+            <objective><![CDATA[Validar mensagem de cliente sem cadastro]]></objective>
+            <owner>62fedec4bb0704a2a809cffb</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Acessar a URL: https://www.saucedemo.com/]]></description>
+                        <expectedResult><![CDATA[Sistema apresenta tela de login]]></expectedResult>
+                        <testData><![CDATA[]]></testData>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Preencher o campo username]]></description>
+                        <expectedResult><![CDATA[Campo preenchido]]></expectedResult>
+                        <testData><![CDATA['SEMCADASTRO']]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Preencher o campo password]]></description>
+                        <expectedResult><![CDATA[Bot&atilde;o entrar dever&aacute; ser habilitado]]></expectedResult>
+                        <testData><![CDATA[123456]]></testData>
+                    </step>
+                    <step index="3">
+                        <customFields/>
+                        <description><![CDATA[Clicar sobre o bot&atilde;o entrar]]></description>
+                        <expectedResult><![CDATA[Sistema apresenta um POP-UP com mensagem conta n&atilde;o existe]]></expectedResult>
+                    </step>
+                    <step index="4">
+                        <customFields/>
+                        <description><![CDATA[Clicar no bot&atilde;o OK do POP-UP]]></description>
+                        <expectedResult><![CDATA[sistema dever&aacute; fechar POP-UP e usu&aacute;rio permanecer na tela de login]]></expectedResult>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+        <testCase id="54568045" key="SWAG-T6">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Rodrigo Valentim Alves</createdBy>
+            <createdOn>2022-11-05 21:20:37 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Validação das mensagens]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Cliente com cadastro tenta fazer login com senha incorreta]]></name>
+            <objective><![CDATA[Sistema apresentar mensagem de alerta de senha incorreta]]></objective>
+            <owner>62fedec4bb0704a2a809cffb</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Acessar URL: https://www.saucedemo.com/]]></description>
+                        <expectedResult><![CDATA[Sistema apresenta tela de login]]></expectedResult>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Preencher o campo username]]></description>
+                        <expectedResult><![CDATA[Campo preenchido]]></expectedResult>
+                        <testData><![CDATA[Rodrigo]]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Preencher o campo password]]></description>
+                        <expectedResult><![CDATA[Bot&atilde;o entrar dever&aacute; ser habilitado]]></expectedResult>
+                        <testData><![CDATA[INCORRETA]]></testData>
+                    </step>
+                    <step index="3">
+                        <customFields/>
+                        <description><![CDATA[Clicar sobre o bot&atilde;o entrar]]></description>
+                        <expectedResult><![CDATA[Sistema apresenta um POP-UP com mensagem de username ou password incorreta]]></expectedResult>
+                    </step>
+                    <step index="4">
+                        <customFields/>
+                        <description><![CDATA[Clicar no bot&atilde;o OK do POP-UP]]></description>
+                        <expectedResult><![CDATA[sistema dever&aacute; fechar POP-UP e usu&aacute;rio permanecer na tela de login]]></expectedResult>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+    </testCases>
+</project>

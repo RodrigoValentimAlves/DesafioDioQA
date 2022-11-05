@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <projectId>10001</projectId>
+    <projectKey>SWAG</projectKey>
+    <exportDate>2022-11-05 21:04:34 UTC</exportDate>
+    <folders>
+        <folder fullPath="Login" index="0"/>
+    </folders>
+    <testCases>
+        <testCase id="54567956" key="SWAG-T2">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Rodrigo Valentim Alves</createdBy>
+            <createdOn>2022-11-05 20:51:25 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Tela de cadastro de nova conta]]></name>
+            <objective><![CDATA[Validar que a conta foi criada com sucesso]]></objective>
+            <owner>62fedec4bb0704a2a809cffb</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given que o cliente está na tela de cadastro de nova conta
+
+And apresenta username
+
+And preenche e-mail
+
+And preenche senha
+
+When clica em 'criar conta'
+
+Then será sistema apresenta POP-UP com mensagem de conta criada com sucesso]]></details>
+            </testScript>
+        </testCase>
+        <testCase id="54567959" key="SWAG-T1">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Rodrigo Valentim Alves</createdBy>
+            <createdOn>2022-11-05 20:55:15 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Cliente sem cadastro deseja criar uma conta]]></name>
+            <objective><![CDATA[Validar que cliente consegue criar uma nova conta]]></objective>
+            <owner>62fedec4bb0704a2a809cffb</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Approved]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given que o cliente está na tela de login
+
+And não esteja cadastrado no sistema
+
+When clica em 'criar conta'
+
+Then será direcionado para uma tela de criação de nova conta]]></details>
+            </testScript>
+        </testCase>
+    </testCases>
+</project>
